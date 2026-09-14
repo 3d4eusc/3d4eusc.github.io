@@ -111,6 +111,10 @@ nav a:not(.nav-cta):hover {
   background: var(--red);
 }
 
+.brand > span {
+  font-size: 28px;
+}
+
 .hero {
   min-height: calc(100vh - 88px);
   display: grid;
@@ -528,23 +532,6 @@ footer p {
   object-fit: cover;
   opacity: 0;
   animation: hero-slideshow 20s infinite;
-}
-
-/* Each picture starts five seconds after the previous one. */
-.hero-slideshow img:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.hero-slideshow img:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.hero-slideshow img:nth-child(3) {
-  animation-delay: 10s;
-}
-
-.hero-slideshow img:nth-child(4) {
-  animation-delay: 15s;
 }
 
 @keyframes hero-slideshow {

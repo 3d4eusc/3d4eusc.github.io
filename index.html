@@ -40,15 +40,15 @@
       </div>
       <div class="hero-art">
         <div class="hero-slideshow">
-          <img src="images/club-photo-1.jpg" alt="3D4E members at a club event">
-          <img src="images/club-photo-2.jpg" alt="3D4E members working with 3D printers">
-          <img src="images/club-photo-3.jpg" alt="3D4E student projects">
-          <img src="images/club-photo-4.jpg" alt="3D4E members at a showcase">
-          <img src="images/club-photo-5.jpg" alt="3D4E members at a showcase">
-          <img src="images/club-photo-6.jpg" alt="3D4E members at a showcase">
+          <img src="images/club-photo-3.jpg" >
+          <img src="images/club-photo-2.jpg" >
+          <img src="images/club-photo-1.jpg" >
+          
+          <img src="images/club-photo-4.jpg">
+          <img src="images/club-photo-5.jpg">
+          <img src="images/club-photo-6.jpg">
         </div>
 
-        <p class="photo-caption">Ideas become objects here.</p>
       </div>
     </section>
 
@@ -142,6 +142,22 @@
       <a href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer">Linktree</a>
     </div>
   </footer>
+  <script>
+  const slides = document.querySelectorAll(".hero-slideshow img");
+  let currentSlide = 0;
+
+  if (slides.length > 0) {
+    slides[0].classList.add("active");
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+
+      currentSlide = (currentSlide + 1) % slides.length;
+
+      slides[currentSlide].classList.add("active");
+    }, 2000);
+  }
+</script>
 </body>
 
 </html>
