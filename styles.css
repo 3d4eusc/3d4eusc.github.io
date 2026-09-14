@@ -2,7 +2,7 @@
   --red: #e43027;
   --red-bright: #e33229;
   --ink: #171717;
-  --cream: #f5f2ea;
+  --cream: #ffffff;
   --white: #ffffff;
   --line: #d9d5cc;
   --muted: #66645f;
@@ -52,7 +52,7 @@ h3,
   justify-content: space-between;
   gap: 24px;
   border-bottom: 1px solid var(--line);
-  background: rgba(245, 242, 234, .95);
+
 }
 
 .brand {
@@ -128,7 +128,7 @@ nav a:not(.nav-cta):hover {
 .section-number {
   color: var(--red);
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -197,127 +197,6 @@ nav a:not(.nav-cta):hover {
 .button-secondary:hover {
   color: var(--white);
   background: var(--ink);
-}
-
-.hero-art {
-  min-height: 650px;
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  background: var(--red);
-}
-
-.hero-art::before,
-.hero-art::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 50%;
-}
-
-.hero-art::before {
-  top: -125px;
-  right: -90px;
-}
-
-.hero-art::after {
-  bottom: -160px;
-  left: -90px;
-  width: 420px;
-  height: 420px;
-}
-
-.hero-art>p {
-  position: absolute;
-  right: 32px;
-  bottom: 22px;
-  color: rgba(255, 255, 255, .8);
-  font-size: 13px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.printer-frame {
-  width: min(70%, 420px);
-  aspect-ratio: .84;
-  position: relative;
-  border: 16px solid var(--ink);
-  border-top-width: 26px;
-  box-shadow: 22px 24px 0 rgba(0, 0, 0, .12);
-}
-
-.printer-top {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  top: 5%;
-  height: 3%;
-  background: var(--white);
-  opacity: .8;
-}
-
-.printer-rail {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30%;
-  height: 13px;
-  background: var(--ink);
-}
-
-.printer-head {
-  position: absolute;
-  left: 42%;
-  top: 25%;
-  width: 60px;
-  height: 66px;
-  background: var(--ink);
-}
-
-.printer-head::after {
-  content: "";
-  position: absolute;
-  left: 26px;
-  top: 100%;
-  width: 8px;
-  height: 50px;
-  background: var(--ink);
-}
-
-.printer-bed {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 11%;
-  height: 16px;
-  background: var(--ink);
-  transform: perspective(100px) rotateX(8deg);
-}
-
-.print-object {
-  position: absolute;
-  left: 28%;
-  right: 28%;
-  bottom: calc(11% + 16px);
-  height: 26%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-}
-
-.print-object span {
-  background: var(--white);
-}
-
-.print-object span:first-child {
-  border-radius: 30px 0 0;
-}
-
-.print-object span:nth-child(2) {
-  border-radius: 0 30px 0 0;
 }
 
 .section {
