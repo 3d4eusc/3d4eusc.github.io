@@ -7,7 +7,7 @@
   <meta name="description"
     content="3D for Everyone at USC is an inclusive community for learning 3D printing, CAD, and additive manufacturing.">
   <title>3D for Everyone at USC</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,7 +20,7 @@
     <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#what-we-do">What we do</a>
-      <a href="#join">Join</a>
+      <a href="#people">People</a>
       <a class="nav-cta" href="contact.html">Contact</a>
     </nav>
   </header>
@@ -32,18 +32,28 @@
         <h1>Learn it.<br>Design it.<br><span>Print it.</span></h1>
         <p class="hero-lede">A welcoming space for USC students to explore 3D printing, CAD, and additive
           manufacturing—no experience required.</p>
+        <ul>
+          <li>Free membership</li>
+          <li>No application</li>
+          <li>No prior experience</li>
+          <li>No minimum time commitment</li>
+          <li>All majors welcome</li>
+        </ul>
         <div class="button-row">
           <a class="button button-primary" href="https://linktr.ee/3d4e_at_usc" target="_blank"
             rel="noopener noreferrer">Join 3D4E <span aria-hidden="true">↗</span></a>
           <a class="button button-secondary" href="#what-we-do">See what we do</a>
+
+
+
         </div>
+
       </div>
       <div class="hero-art">
         <div class="hero-slideshow">
-          <img src="images/club-photo-3.jpg" >
-          <img src="images/club-photo-2.jpg" >
-          <img src="images/club-photo-1.jpg" >
-          
+
+          <img src="images/club-photo-2.jpg">
+          <img src="images/club-photo-1.jpg">
           <img src="images/club-photo-4.jpg">
           <img src="images/club-photo-5.jpg">
           <img src="images/club-photo-6.jpg">
@@ -112,52 +122,46 @@
       </div>
     </section>
 
-    <section class="join-section" id="join">
-      <div>
-        <p class="eyebrow">Ready to make something?</p>
-        <h2>Come as you are.<br>Leave with new skills.</h2>
+
+
+
+
+    <footer>
+      <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="images/logo.png"
+          alt="3D for Everyone logo"><span>3D for
+          Everyone</span></a>
+      <p>©2026 3D4E USC</p>
+      <div class="footer-links">
+        <a href="mailto:3d4e.usc@gmail.com" aria-label="Email 3D4E">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://www.instagram.com/3d4e_usc/" target="_blank" rel="noopener noreferrer"
+          aria-label="3D4E Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer" aria-label="3D4E Linktree">
+          <i class="fa-solid fa-link"></i>
+        </a>
       </div>
-      <div class="join-details">
-        <ul>
-          <li>Free membership</li>
-          <li>No application</li>
-          <li>No prior experience</li>
-          <li>No minimum time commitment</li>
-          <li>All majors welcome</li>
-        </ul>
-        <a class="button button-light" href="https://linktr.ee/3d4e_at_usc" target="_blank"
-          rel="noopener noreferrer">Join through Linktree <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-  </main>
+    </footer>
+    <script>
+      const slides = document.querySelectorAll(".hero-slideshow img");
+      let currentSlide = 0;
 
-  <footer>
-    <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="images/logo.png"
-        alt="3D for Everyone logo"><span>3D for
-        Everyone</span></a>
-    <p>Made for makers at USC.</p>
-    <div class="footer-links">
-      <a href="mailto:3d4e.usc@gmail.com">Email</a>
-      <a href="https://www.instagram.com/3d4e_usc/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer">Linktree</a>
-    </div>
-  </footer>
-  <script>
-  const slides = document.querySelectorAll(".hero-slideshow img");
-  let currentSlide = 0;
+      if (slides.length > 0) {
+        slides[0].classList.add("active");
 
-  if (slides.length > 0) {
-    slides[0].classList.add("active");
+        setInterval(() => {
+          slides[currentSlide].classList.remove("active");
 
-    setInterval(() => {
-      slides[currentSlide].classList.remove("active");
+          currentSlide = (currentSlide + 1) % slides.length;
 
-      currentSlide = (currentSlide + 1) % slides.length;
-
-      slides[currentSlide].classList.add("active");
-    }, 2000);
-  }
-</script>
+          slides[currentSlide].classList.add("active");
+        }, 2000);
+      }
+    </script>
 </body>
 
 </html>

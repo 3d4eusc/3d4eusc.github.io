@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Contact and join 3D for Everyone at USC.">
   <title>Contact | 3D for Everyone at USC</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="3D for Everyone home">
@@ -16,20 +19,33 @@
     <nav aria-label="Main navigation">
       <a href="index.html#about">About</a>
       <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#join">Join</a>
+      <a href="index.html#people">People</a>
       <a class="nav-cta active" href="contact.html" aria-current="page">Contact</a>
     </nav>
   </header>
 
   <main class="contact-main">
     <section class="contact-hero">
-      <p class="eyebrow">Contact 3D4E</p>
-      <h1>Let’s make<br><span>something.</span></h1>
-      <p>Whether you are brand new to 3D printing or already have an idea in mind, you are welcome here.</p>
+      <div class="contact-hero-title">
+        <p class="eyebrow">Contact 3D4E</p>
+        <h1>
+          Interested in Joining<br>
+          <span>3D4E</span>?
+        </h1>
+        <p class="contact-description">
+          Whether you are brand new to 3D printing or already have an idea
+          in mind, you are welcome here.
+        </p>
+      </div>
     </section>
 
     <section class="contact-grid" aria-label="Contact options">
-      
+      <a class="contact-card" href="https://discord.gg/g58Dfj5RV" target="_blank" rel="noopener noreferrer">
+        <span class="contact-label">Discord</span>
+        <strong>https://discord.gg/g58Dfj5RV</strong>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+
       <a class="contact-card" href="mailto:3d4e.usc@gmail.com">
         <span class="contact-label">Email</span>
         <strong>3d4e.usc@gmail.com</strong>
@@ -48,20 +64,35 @@
     </section>
 
     <section class="contact-note">
-      <h2>The easiest way to get started</h2>
-      <p>Open our Linktree to find the current Discord and interest form. Important workshop and club updates are posted through our community channels.</p>
-      <a class="button button-primary" href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer">Open Linktree <span aria-hidden="true">↗</span></a>
+      <div>
+        <h2>Join Our Discord</h2>
+      </div>
+
+      <a href="https://discord.gg/g58Dfj5RV" target="_blank" rel="noopener noreferrer">
+        <img class="discord-qr" src="images/discord.png" alt="QR code for the 3D4E Discord">
+      </a>
     </section>
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="3D for Everyone logo"><span>3D for Everyone</span></a>
+    <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="images/logo.png"
+        alt="3D for Everyone logo"><span>3D for Everyone</span></a>
     <p>©2026 3D4E USC</p>
     <div class="footer-links">
-      <a href="mailto:3d4e.usc@gmail.com">Email</a>
-      <a href="https://www.instagram.com/3d4e_usc/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer">Linktree</a>
+      <a href="mailto:3d4e.usc@gmail.com" aria-label="Email 3D4E">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+
+      <a href="https://www.instagram.com/3d4e_usc/" target="_blank" rel="noopener noreferrer"
+        aria-label="3D4E Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://linktr.ee/3d4e_at_usc" target="_blank" rel="noopener noreferrer" aria-label="3D4E Linktree">
+        <i class="fa-solid fa-link"></i>
+      </a>
     </div>
   </footer>
 </body>
+
 </html>

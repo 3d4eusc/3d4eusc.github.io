@@ -111,7 +111,7 @@ nav a:not(.nav-cta):hover {
   background: var(--red);
 }
 
-.brand > span {
+.brand>span {
   font-size: 28px;
 }
 
@@ -217,7 +217,6 @@ nav a:not(.nav-cta):hover {
 .intro h2,
 .section-heading h2,
 .lab-copy h2,
-.join-section h2,
 .contact-note h2 {
   margin-bottom: 30px;
   font-size: clamp(38px, 5.2vw, 72px);
@@ -360,36 +359,6 @@ nav a:not(.nav-cta):hover {
   font-weight: 700;
 }
 
-.join-section {
-  padding: clamp(72px, 10vw, 150px) clamp(24px, 7vw, 104px);
-  display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 70px;
-  color: var(--white);
-  background: var(--red);
-}
-
-.join-section .eyebrow {
-  color: var(--white);
-  opacity: .8;
-}
-
-.join-section h2 {
-  margin-bottom: 0;
-}
-
-.join-details ul {
-  margin: 0 0 36px;
-  padding: 0;
-  list-style: none;
-}
-
-.join-details li {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .35);
-  font-weight: 600;
-}
-
 .button-light {
   color: var(--ink);
   background: var(--white);
@@ -437,10 +406,21 @@ footer p {
 }
 
 .contact-hero {
-  padding: clamp(70px, 9vw, 130px) clamp(24px, 7vw, 104px) 70px;
+  padding: clamp(70px, 9vw, 130px) clamp(24px, 7vw, 104px);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 100px;
+}
+
+
+.contact-description {
+  max-width: 650px;
+  font-size: 21px;
 }
 
 .contact-hero h1 {
+  margin-bottom: 30px;
   max-width: 950px;
 }
 
@@ -512,6 +492,31 @@ footer p {
 .contact-note .button {
   justify-self: start;
 }
+
+.contact-note {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.discord-qr {
+  display: block;
+  width: 260px;
+  height: 260px;
+  padding: 12px;
+  object-fit: contain;
+  background: white;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+}
+
+.discord-qr:hover {
+  transform: scale(1.04);
+}
+
+
 
 .hero-art {
   position: relative;
@@ -609,7 +614,6 @@ footer p {
   .intro,
   .section-heading,
   .lab-section,
-  .join-section,
   .contact-note {
     grid-template-columns: 1fr;
   }
@@ -626,12 +630,28 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  footer {
-    grid-template-columns: 1fr;
+  .footer-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
   }
 
-  .footer-links {
-    justify-content: flex-start;
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-size: 27px;
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--red);
+    transform: translateY(-3px);
   }
 
   .contact-note h2 {
@@ -688,10 +708,6 @@ footer p {
     min-height: 390px;
   }
 
-  .join-section {
-    gap: 45px;
-  }
-
   .contact-card {
     grid-template-columns: 1fr auto;
     gap: 4px 16px;
@@ -703,6 +719,11 @@ footer p {
 
   .footer-brand span:last-child {
     display: inline;
+  }
+
+  .discord-qr {
+    width: 220px;
+    height: 220px;
   }
 }
 
