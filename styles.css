@@ -208,7 +208,7 @@ nav a:not(.nav-cta):hover {
 }
 
 .section {
-  padding: clamp(72px, 10vw, 150px) clamp(24px, 7vw, 104px);
+  padding: clamp(45px, 6vw, 80px) clamp(24px, 7vw, 104px);
 }
 
 .intro {
@@ -239,9 +239,6 @@ nav a:not(.nav-cta):hover {
 }
 
 .section-heading {
-  display: grid;
-  grid-template-columns: minmax(180px, .45fr) 1.55fr;
-  gap: 48px;
   align-items: start;
 }
 

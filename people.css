@@ -1,0 +1,113 @@
+.people-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.person-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 6px solid var(--red);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(23, 23, 23, 0.08);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(23, 23, 23, 0.13);
+}
+
+.person-photo {
+    display: block;
+    width: calc(100% - 32px);
+    height: 250px;
+    margin: 16px 16px 0;
+    object-fit: cover;
+    object-position: center;
+    background: #eeeeee;
+    border-radius: 8px;
+}
+
+.person-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.person-info h3 {
+    margin: 0 0 3px;
+    color: var(--ink);
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+.person-info p {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.person-info .person-role {
+    margin-bottom: 16px;
+    color: var(--red);
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+
+.person-info .person-role {
+    margin-bottom: 14px;
+    color: var(--red);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.people-hero {
+    padding-bottom: 10px;
+}
+
+.people-section {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.people-section .section-heading {
+    display: block;
+}
+
+.people-section .section-heading h2 {
+    margin-bottom: 0;
+    font-size: clamp(28px, 3vw, 44px);
+}
+
+.people-section .people-grid {
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .people-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .people-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+}
